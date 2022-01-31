@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   pipex.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmechich <hmechich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 17:27:47 by hmechich          #+#    #+#             */
-/*   Updated: 2022/01/31 17:36:35 by hmechich         ###   ########.fr       */
+/*   Created: 2022/01/31 17:30:20 by hmechich          #+#    #+#             */
+/*   Updated: 2022/01/31 17:35:36 by hmechich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#ifndef PIPEX_H
+# define PIPEX_H
 
-int	main(int ac, char **av)
-{
+# include <stdlib.h>
+# include <fcntl.h>
+# include <unistd.h>
+# include <sys/wait.h>
+# include <stdio.h>
+# include <string.h>
 
-	return (EXIT_SUCCESS);
-}
+#endif
