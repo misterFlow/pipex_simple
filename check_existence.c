@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   check_existence.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmechich <hmechich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 18:03:53 by hmechich          #+#    #+#             */
-/*   Updated: 2022/01/31 18:12:51 by hmechich         ###   ########.fr       */
+/*   Created: 2022/01/31 18:04:50 by hmechich          #+#    #+#             */
+/*   Updated: 2022/01/31 18:05:30 by hmechich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-int	main(int ac, char **av)
+int	check_existence(char *filename)
 {
-	if (ac != 5)
-		return (EXIT_FAILURE);
-	printf("%i\n", check_existence(av[1]));
-	return (EXIT_SUCCESS);
+	if (access(filename, F_OK) == 0)
+		return (1);
+	else
+		return (0);
 }
