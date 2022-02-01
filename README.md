@@ -1,4 +1,4 @@
-# Pipex
+# 🚽 Pipex
 Summary: This project is the discovery in detail and by programming of a UNIX mechanism that you already know.  
   
 Version: 2
