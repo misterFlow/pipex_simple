@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmechich <hmechich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 18:03:53 by hmechich          #+#    #+#             */
-/*   Updated: 2022/02/11 00:35:45 by hmechich         ###   ########.fr       */
+/*   Created: 2021/12/18 15:43:58 by hmechich          #+#    #+#             */
+/*   Updated: 2022/02/11 00:26:19 by hmechich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/pipex.h"
+#include "ft_printf.h"
+#include "utils/libft.h"
 
-int	main(int ac, char **av, char **env)
+void	print_str(va_list arg, int *arg_len)
 {
-	int		return_value;
-	char	**cmd;
+	char	*str;
 
-	if (ac != 5)
-		return (error_calling_pipex());
-	cmd = get_cmd(av[2], env);
-	return_value = execve(cmd[0], cmd, get_path(env));
-	if (return_value == -1)
-		perror("execve");
-	return (EXIT_SUCCESS);
+	str = va_arg(arg, void *);
+	if (str == NULL)
+		ft_putstr("(null)", arg_len);
+	else
+		ft_putstr(str, arg_len);
 }

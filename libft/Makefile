@@ -3,7 +3,8 @@ NAME=libft.a
 CFLAGS=-Wall -Wextra -Werror
 OPTIONS=-c -I.
 SRC=ft_mem*.c ft_str*.c ft_to*.c ft_is*.c ft_atoi.c ft_bzero.c ft_calloc.c \
-ft_substr.c ft_split.c ft_itoa.c ft_*_fd.c
+ft_substr.c ft_split.c ft_itoa.c ft_*_fd.c ft_printf.c utils.c utils2.c \
+utils/*.c
 OBJ=*.o
 BONUS=ft_lst*.c
 

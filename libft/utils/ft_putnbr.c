@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmechich <hmechich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 18:03:53 by hmechich          #+#    #+#             */
-/*   Updated: 2022/02/11 00:35:45 by hmechich         ###   ########.fr       */
+/*   Created: 2021/11/26 10:15:38 by hmechich          #+#    #+#             */
+/*   Updated: 2021/12/19 15:55:26 by hmechich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/pipex.h"
+#include "libft.h"
 
-int	main(int ac, char **av, char **env)
+void	ft_putnbr(int n, int *base_len)
 {
-	int		return_value;
-	char	**cmd;
+	unsigned int	number;
 
-	if (ac != 5)
-		return (error_calling_pipex());
-	cmd = get_cmd(av[2], env);
-	return_value = execve(cmd[0], cmd, get_path(env));
-	if (return_value == -1)
-		perror("execve");
-	return (EXIT_SUCCESS);
+	if (n < 0)
+	{
+		ft_putchar('-', base_len);
+		number = -n;
+	}
+	else
+		number = n;
+	if (number > 9)
+	{
+		ft_putnbr(number / 10, base_len);
+		number %= 10;
+	}
+	ft_putchar(number + '0', base_len);
 }

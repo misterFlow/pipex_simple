@@ -12,7 +12,7 @@ $(NAME): $(OBJ)
 	$(CC) -o $(NAME) $(CFLAGS) $(OBJ) $(LIBFT)
 
 $(OBJ): $(SRC)
-	$(CC) $(CFLAGS) $(OPTIONS) $(SRC) $(LIBFT)
+	$(CC) $(CFLAGS) $(OPTIONS) $(SRC)
 
 clean:
 	rm -f $(OBJ)

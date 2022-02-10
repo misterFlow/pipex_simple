@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmechich <hmechich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 18:03:53 by hmechich          #+#    #+#             */
-/*   Updated: 2022/02/11 00:35:45 by hmechich         ###   ########.fr       */
+/*   Created: 2022/02/10 23:56:38 by hmechich          #+#    #+#             */
+/*   Updated: 2022/02/11 00:01:21 by hmechich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/pipex.h"
 
-int	main(int ac, char **av, char **env)
+int	error_calling_pipex(void)
 {
-	int		return_value;
-	char	**cmd;
-
-	if (ac != 5)
-		return (error_calling_pipex());
-	cmd = get_cmd(av[2], env);
-	return_value = execve(cmd[0], cmd, get_path(env));
-	if (return_value == -1)
-		perror("execve");
-	return (EXIT_SUCCESS);
+	ft_putstr_fd("Usage:\n./pipex file1 cmd1 cmd2 file2\n", 2);
+	return (EXIT_FAILURE);
 }

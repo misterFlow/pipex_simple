@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmechich <hmechich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 18:03:53 by hmechich          #+#    #+#             */
-/*   Updated: 2022/02/11 00:35:45 by hmechich         ###   ########.fr       */
+/*   Created: 2021/11/26 09:05:18 by hmechich          #+#    #+#             */
+/*   Updated: 2021/12/19 15:52:39 by hmechich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/pipex.h"
+#include "libft.h"
 
-int	main(int ac, char **av, char **env)
+void	ft_putchar(char c, int *base_len)
 {
-	int		return_value;
-	char	**cmd;
-
-	if (ac != 5)
-		return (error_calling_pipex());
-	cmd = get_cmd(av[2], env);
-	return_value = execve(cmd[0], cmd, get_path(env));
-	if (return_value == -1)
-		perror("execve");
-	return (EXIT_SUCCESS);
+	*base_len += write(1, &c, 1);
 }

@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pipex.h                                            :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmechich <hmechich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 17:30:20 by hmechich          #+#    #+#             */
-/*   Updated: 2022/02/11 00:28:33 by hmechich         ###   ########.fr       */
+/*   Created: 2021/11/21 04:24:51 by hmechich          #+#    #+#             */
+/*   Updated: 2021/12/19 20:00:05 by hmechich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PIPEX_H
-# define PIPEX_H
-
-# include <stdlib.h>
-# include <fcntl.h>
-# include <unistd.h>
-# include <sys/wait.h>
-# include <stdio.h>
+#ifndef LIBFT_H
+# define LIBFT_H
 # include <string.h>
-# include "../libft/libft.h"
-# include "../libft/ft_printf.h"
+# include <stdlib.h>
+# include <unistd.h>
 
-# define COMMAND_NOT_FOUND 127
-
-int		check_existence(char *filename);
-char	**get_path(char **env);
-char	**get_cmd(char const *arg_cmd, char **env);
-int		error_calling_pipex(void);
+void		ft_putchar(char c, int *base_len);
+void		ft_putstr(char *s, int *base_len);
+void		ft_putnbr(int n, int *base_len);
+void		ft_putnbr_u(unsigned int n, int *base_len);
+void		ft_putnbr_base_u(unsigned int n, char *base, int *len);
+void		ft_putnbr_base_ul(unsigned long n, char *base, int *len);
+void		ft_putnbr_base(int n, char *base, int *len);
+size_t		ft_strlen(char *str);
 
 #endif
