@@ -6,7 +6,7 @@
 /*   By: hmechich <hmechich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 17:30:20 by hmechich          #+#    #+#             */
-/*   Updated: 2022/02/11 00:53:31 by hmechich         ###   ########.fr       */
+/*   Updated: 2022/02/11 01:38:02 by hmechich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@
 
 int		check_existence(char *filename);
 char	**get_path(char **env);
-char	**get_cmd(char const *arg_cmd, char const *infile, char **env);
+char	**get_cmd(char const *arg_cmd, char **env);
 int		error_calling_pipex(void);
+int		error_infile(char const *filename);
 
 #endif

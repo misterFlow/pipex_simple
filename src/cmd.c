@@ -6,7 +6,7 @@
 /*   By: hmechich <hmechich@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 11:21:15 by hmechich          #+#    #+#             */
-/*   Updated: 2022/02/11 00:55:36 by hmechich         ###   ########.fr       */
+/*   Updated: 2022/02/11 01:32:58 by hmechich         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,11 @@ static int	get_cmd_path(char **cmd, char **env)
 	return (COMMAND_NOT_FOUND);
 }
 
-char	**get_cmd(char const *arg_cmd, char const *infile, char **env)
+char	**get_cmd(char const *arg_cmd, char **env)
 {
 	char	**cmd;
-	char	*tmp_cmd;
-	char	*file;
 
-	file = ft_strjoin(" ", infile);
-	tmp_cmd = ft_strjoin(arg_cmd, file);
-	cmd = ft_split(tmp_cmd, ' ');
+	cmd = ft_split(arg_cmd, ' ');
 	if (cmd == NULL)
 		return (NULL);
 	if (get_cmd_path(cmd, env) == 0)
