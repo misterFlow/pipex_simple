@@ -1,5 +1,5 @@
 # 🚽 Pipex
-![hmechich's 42Project Score](https://badge42.herokuapp.com/api/project/hmechich/pipex)  
+[![hmechich's 42 pipex Score](https://badge42.vercel.app/api/v2/cl2hcqkej028109mpjfyxf3q7/project/2463606)](https://github.com/JaeSeoKim/badge42)  
 Summary: This project is the discovery in detail and by programming of a UNIX mechanism that you already know.  
   
 Version: 2
